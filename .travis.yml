@@ -3,7 +3,7 @@ sudo: required
 cache: 
   directories:
     - $HOME/.m2
-    - node_modules
+    - node_modules 
     - bower_components
 jdk:
   - oraclejdk8
@@ -11,8 +11,7 @@ script:
   - cd desapp-grupoe-backend 
   - mvn clean install -Dmaven.compiler.target=1.8 -Dmaven.compiler.source=1.8
   - cd ..
-  - curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash - 2>&1 /dev/null
-  - sudo apt-get install -y nodejs 2>&1 /dev/null
+  - curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash - && sudo apt-get install -y nodejs
   - cd desapp-grupoe-frontend
   - sudo npm install -g grunt-cli
   - sudo npm install -g bower
