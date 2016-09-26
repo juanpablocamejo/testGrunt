@@ -4,8 +4,14 @@ jdk:
   - oraclejdk8
 script: cd desapp-grupoe-backend && mvn clean install -Dmaven.compiler.target=1.8 -Dmaven.compiler.source=1.8 && cd ..
 before_deploy:
-  - sudo apt-get update && sudo apt-get install nodejs && sudo apt-get install npm
-  - cd desapp-grupoe-frontend && sudo npm install npm@latest -g && sudo npm install && sudo grunt && cd ..
+  - cd desapp-grupoe-frontend 
+  - sudo apt-get update 
+  - sudo apt-get install nodejs 
+  - sudo apt-get install npm
+  - sudo npm install npm@latest -g 
+  - sudo npm install 
+  - sudo grunt 
+  - cd ..
 deploy:
   provider: heroku
   api_key: d75c7509-1a26-4283-ba25-3e59df710b8f
