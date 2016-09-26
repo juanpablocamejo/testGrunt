@@ -1,10 +1,10 @@
 language: java
 sudo: required
-cache: 
-  directories:
-    - $HOME/.m2
-    - node_modules 
-    - bower_components
+#cache: 
+#  directories:
+#    - $HOME/.m2
+#    - node_modules 
+#    - bower_components
 jdk:
   - oraclejdk8
 script: 
@@ -15,7 +15,7 @@ script:
   - sudo npm install -g grunt-cli
   - sudo npm install -g bower
   - npm install
-  #- bower install
+  - bower install
   - sudo grunt test
   - cd ../desapp-grupoe-backend
   
