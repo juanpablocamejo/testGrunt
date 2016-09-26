@@ -7,12 +7,15 @@ cache:
 jdk:
   - oraclejdk8
 script: 
-  - cd desapp-grupoe-backend && mvn clean install -Dmaven.compiler.target=1.8 -Dmaven.compiler.source=1.8
-  - sudo curl -sL https://deb.nodesource.com/setup | sudo bash -
-  - sudo apt-get install -y nodejs npm
-  - cd desapp-grupoe-frontend && sudo npm install
-  - cd desapp-grupoe-frontend && sudo npm install grunt-cli bower
-  - cd desapp-grupoe-frontend && sudo grunt 
+  - cd desapp-grupoe-backend 
+  - mvn clean install -Dmaven.compiler.target=1.8 -Dmaven.compiler.source=1.8
+  - cd ..
+  - sudo apt-get install nodejs npm
+  - cd desapp-grupoe-frontend
+  - sudo npm install
+  - sudo npm install grunt-cli bower
+  - sudo grunt 
+  - cd ..
 #deploy:
 #  provider: heroku
 #  api_key: d75c7509-1a26-4283-ba25-3e59df710b8f
