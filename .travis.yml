@@ -17,6 +17,8 @@ script:
   - npm install
   - bower install
   - sudo grunt 
+  - cd ../desapp-grupoe-backend
+  
 deploy:
   skip_cleanup: true
   provider: heroku
